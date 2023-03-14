@@ -1,0 +1,3 @@
+I need an money tracker app. where users can add their transaction as well as delete their transaction. user can be able to see their initial balance also they will be able to see their total expense and income balance. moreover users can see their all transactions. every transaction will have created time. there will be an section where users
+can filter and search their transactions. users can select their transaction. and they will be able to delete their selected transactions and delete all simultaneously. 
+so this is the requirement.. build this app using react js.....    
