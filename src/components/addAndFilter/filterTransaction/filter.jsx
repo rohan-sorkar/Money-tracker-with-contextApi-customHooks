@@ -1,15 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../../../state-provider/stateProvider";
 
-const Filter = (props) => {
-  const {
-    deleteAll,
-    deleteSelectedTransaction,
-    searchTerm,
-    searchInputChange,
-    filterTerm,
-    filterInputChange,
-  } = props;
-  
+const Filter = () => {
+  const {deleteAll, deleteSelectedTransaction, searchTerm, searchInputChange, filterTerm, filterInputChange} = useContext(AppContext);
+
   return (
     <div className="mt-5 shadow p-4 rounded-xl">
       <input

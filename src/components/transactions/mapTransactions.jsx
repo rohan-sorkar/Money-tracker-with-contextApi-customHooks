@@ -1,17 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../../state-provider/stateProvider";
 import Transaction from "./transaction";
 
-const MapTransactions = (props) => {
-  const { transactions, selectTransaction, deleteTransaction } = props;
+const MapTransactions = () => {
+  const {filteredTransactions, transactions} = useContext(AppContext);
   return (
     <div className="grid grid-cols-2 gap-x-4 gap-y-7 mt-4">
       {transactions.length > 0 &&
-        transactions.map((transaction) => (
+        filteredTransactions.map((transaction) => (
           <Transaction
             key={transaction.id}
             transaction={transaction}
-            selectTransaction={selectTransaction}
-            deleteTransaction={deleteTransaction}
           />
         ))}
     </div>

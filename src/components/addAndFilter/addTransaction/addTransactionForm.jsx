@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { v4 as uuidV4 } from "uuid";
 import Swal from "sweetalert2";
+import { AppContext } from "../../../state-provider/stateProvider";
 
 const initialState = { title: "", amount: "", isIncome: true };
 
-const AddTransactionForm = ({ addTransaction }) => {
+const AddTransactionForm = () => {
   const [formState, setFormState] = useState({ ...initialState });
+  const {addTransaction} = useContext(AppContext);
 
   const inputChange = (event) => {
     setFormState({

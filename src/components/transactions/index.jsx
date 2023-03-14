@@ -1,8 +1,9 @@
-import React from "react";
+import { useContext } from "react";
+import { AppContext } from "../../state-provider/stateProvider";
 import MapTransactions from "./mapTransactions";
 
-const TransactionContainer = (props) => {
-  const { transactions, selectTransaction, deleteTransaction } = props;
+const TransactionContainer = () => {
+  const {transactions} = useContext(AppContext);
   return (
     <div className="mb-10">
       <h3 className="text-lg font-medium mt-6">History</h3>
@@ -12,9 +13,6 @@ const TransactionContainer = (props) => {
         <h2 className="mt-5 text-xl">There is no Transactions😥</h2>
       )}
       <MapTransactions
-        transactions={transactions}
-        selectTransaction={selectTransaction}
-        deleteTransaction={deleteTransaction}
       />
     </div>
   );

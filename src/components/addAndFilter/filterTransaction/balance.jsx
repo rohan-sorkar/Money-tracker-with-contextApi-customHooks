@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AppContext } from '../../../state-provider/stateProvider';
 
-const Balance = ({totalIncome, totalExpense}) => {
+const Balance = () => {
+  const {totalIncome, totalExpense} = useContext(AppContext);
   return (
     <>
     <h3 className="mt-5 text-xl font-bold">Your Balance</h3>

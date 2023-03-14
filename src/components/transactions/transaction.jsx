@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { RiDeleteBin4Line } from "react-icons/ri";
+import { AppContext } from "../../state-provider/stateProvider";
 
-const Transaction = (props) => {
-  const { transaction, selectTransaction, deleteTransaction } = props;
-  ("shadow rounded-2xl py-3 px-4 border-r-8 border-green-300 w-full");
+const Transaction = ({ transaction }) => {
+  const { selectTransaction, deleteTransaction } = useContext(AppContext);
+  
   return (
     <div
       className={`shadow rounded-2xl py-3 px-4 border-r-8 ${
